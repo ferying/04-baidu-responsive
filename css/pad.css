@@ -1,0 +1,232 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*pc端和移动端的手机结构隐藏，pad结构显示*/
+.pc,.mobile{
+	display: none;
+}
+.pad{
+	display: block;
+}
+
+
+body{
+	font-size: 14px;
+	font-family: arial,"华文细黑";
+	background-color:#fafafa;
+}
+
+.wrapper{
+	position: relative;
+	min-width: 750px;
+}
+
+header{
+	overflow: hidden;
+	height: 45px;
+	line-height: 30px;
+	color: #505050;
+}
+header nav{
+	width: 180px;
+	float: right;
+}
+header nav ul{
+	width: 100%;
+	overflow: hidden;
+}
+header nav ul li{
+	float: left;
+	list-style: none;
+	width: 60px;
+	text-align: center;
+	text-indent: -9999em;
+	background: url(../img/pad/icon_menu_b0b60d01.png) 0 0 no-repeat;
+	background-size: 200px auto;
+	margin-top: 11px;
+}
+header nav ul li:nth-of-type(1){
+	background-position: 0 center;
+}
+header nav ul li:nth-of-type(2){
+	background-position: -50px center;
+}
+header nav ul li:nth-of-type(3){
+	background-position: -100px center;
+}
+
+
+.content{
+	text-align: center;
+	margin-top: 30px;
+}
+.content img{
+	width: 270px;
+	height: 129px;
+}
+.content .search_form{
+	position: relative;
+	margin: 15px auto;
+	width: 638px;
+	height: 40px;
+}
+.content .search_input{
+	width: 636px;
+	height: 38px;
+	outline: 0;
+	border: 1px solid #b6b6b6;
+	text-indent: 8px;
+}
+.content .search_input:hover{
+	border-color: #999;
+}
+.content .search_input:focus{
+	border-color: #6bd;
+}
+/*话筒小图标*/
+.content .search_form .bg_img_voice{
+	display: inline-block;
+	width: 21px;
+	height: 31px;
+	background: url(../img/pad/voice.png) no-repeat;
+	background-size: 90%;
+	position: absolute;
+	top: 7px;
+	right: 58px;
+}
+/*相机小图标*/
+.content .search_form .bg_img_camera{
+	display: inline-block;
+	width: 32px;
+	height: 25px;
+	background: url(../img/pad/camera-m.png) no-repeat;
+	background-size: 90%;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+
+/*图标中间的竖线*/
+.content .search_form .line{
+	position: absolute;
+	top: 3px;
+	right: 50px;
+	display: inline-block;
+	height: 34px;
+	width: 0;
+	border-left: 1px solid #e6e6e6;
+}
+
+
+/*广告展示部分*/
+.ad-box{
+
+}
+/* ad-carditem */
+.ad-box .ad-carditem{
+	width: 639px;
+	margin: 100px auto 30px;
+}
+.ad-box .ad-carditem nav{
+	background: #fff;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1);
+	height: 55px;
+}
+.ad-box .ad-carditem nav a{
+	text-decoration: none;
+	color: #333;
+	display: inline-block;
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	border-right: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+	padding: 0 16px 0 14px;
+}
+.ad-box .ad-carditem nav a:last-child{
+	border-right: 0;
+}
+.ad-box .ad-carditem nav a img{
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+.ad-box .ad-carditem nav a span{
+	margin-left: 5px;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+/* 新闻热词 */
+.ad-box .ad-hotwords{
+	width: 639px;
+	margin: 0px auto 30px;
+	background: #fff;
+	box-shadow: 0 2px 3px rgba(0,0,0,.1);
+}
+.ad-box .ad-hotwords .hot-header{
+	height: 45px;
+	padding-left: 20px;
+	border-bottom: 1px solid #f0f0f0;
+}
+.ad-box .ad-hotwords .hot-header h3{
+	height: 45px;
+	line-height: 45px;
+	font-weight: normal;
+	font-size: 18px;
+}
+.ad-box .hot-content {
+	overflow: hidden;
+	font-size: 16px;
+	color: #333;
+}
+.ad-box .hot-content a.hot-item{
+	display: block;
+	text-decoration: none;
+	color: #333;
+	box-sizing: border-box;
+	font-size: 18px;
+	float: left;
+	border: 1px solid #f0f0f0;
+	width: 214px;
+	height: 53px;
+	line-height: 53px;
+	margin-top: -1px;
+	margin-left: -1px;
+	padding-left: 20px;
+	border-right: 0;
+}
+.ad-box .hot-content .hot-item .new{
+	font-size: 11px;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	background: #f13f40;
+	color: #fff;	
+	text-align: center;
+	vertical-align: middle;
+}
+
+/*下载链接*/
+.download-link{
+	text-align: center;
+	font-size: 14px;
+	margin-top: 50px;
+}
+.download-link a{
+	color: #00c;
+}
+
+
+/*底部信息*/
+footer{
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 20px;
+	color: #ccc;
+}
+
+

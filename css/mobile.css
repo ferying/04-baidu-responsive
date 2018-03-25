@@ -1,0 +1,383 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ol,ul{
+  list-style: none;
+}
+
+body{
+  background-color: #eeeff0;
+}
+
+/*PC端和移动端pad结构隐藏，手机结构显示*/
+.pc,.pad{
+	display: none;
+}
+.mobile{
+	display: block;
+}
+
+
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:20px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/**/
+.wrapper{
+  position: relative;
+  min-width: 360px;
+}
+
+header{
+  height: 54px;
+}
+/*天气显示*/
+header .weather{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 6px;
+  height: 40px;
+  line-height: 40px;
+}
+.weather .weather-img{
+  display: inline-block;
+  color: #8B8484;
+}
+.weather .weather-num{
+  display: inline-block;
+  font-size: 20px;
+  color: #403C3C;
+  padding-left: 2px;
+  margin-left: -5px;
+}
+.weather .weather-status{
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  margin-left: -12px;
+} 
+.weather .weather-status p{
+  height: 13px;
+  line-height: 13px;
+  font-size: 11px;
+  color: #999;
+}
+/*用户设置*/
+header .user-set{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 6px;
+  height: 40px;
+  line-height: 40px;
+}
+header .user-set a{
+  text-decoration: none;
+  color: #666;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/*中间的搜索部分*/
+.content {
+  text-align: center;
+}
+/*logo*/
+.content img{
+  width: 175px;
+  height: 55px;
+  padding: 17px 0 15px;
+}
+.content .search_form{
+  position: relative;
+  margin: 0 10px;
+  height: 42px;
+  display: flex;
+}
+.search_form .search_input{
+  height: 38px;
+  flex: 1;
+  font-size: 18px;
+  line-height: 28px;
+}
+.search_form .search_btn{
+  width: 82px;
+  height: 42px;
+  background: #38f;
+  color: #fff;
+  white-space: nowrap;
+  line-height: 42px;
+  letter-spacing: -1px;
+  font-size: 16px;
+  border: 0;
+}
+/*导航链接部分*/
+.content nav{
+  margin: 17px 0 14px;
+  display: flex;
+}
+.content nav a{
+  flex: 1;
+  text-decoration: none;
+  color: #666;
+  font-size: 12px;
+}
+.content nav a i.iconfont{
+  display: block;
+  margin-bottom: 4px;
+}
+
+/*卡片链接部分*/
+.plus-card {
+  padding: 10px 8px 10px;
+  font-size: 14px;
+}
+
+.plus-card > div{
+  background: #fff;
+  color: #999;
+  margin-top: 8px;
+}
+/*标题*/
+.plus-card > div .title h3{
+  display: inline-block;
+  margin: 2px 14px 0;
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: normal;
+}
+/*编辑图标*/
+.plus-card > div .title i.iconfont.edit{
+  display: inline-block;
+  float: right;
+  width: 30px;
+  height: 40px;
+  line-height: 40px;
+}
+/*更新图标*/
+.plus-card > div .title span.refresh{
+  display: inline-block;
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  color: #262626;
+  margin-right: 20px;
+}
+.plus-card > div .title span.refresh i.iconfont{
+  width: 30px;
+  display: inline-block;
+  color: #999;
+}
+
+
+/*我的导航内容部分*/
+.my-nav .nav-content{
+  overflow: hidden;
+}
+.my-nav .nav-content a{
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #262626;
+  height: 42px;
+  line-height: 42px;
+  width: 25%;
+  text-align: center;
+  padding: 0 6px;
+}
+
+/*实时热点内容部分*/
+.hot-word .hot-content{
+  overflow: hidden;
+  padding: 0 12px;
+}
+.hot-word .hot-content a{
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #262626;
+  height: 42px;
+  line-height: 42px;
+  width: 50%;
+  text-align: left;
+  padding-left: 10px;
+  position: relative;
+}
+/*添加热门图标提示*/
+.hot-word .hot-content a i.hot{
+  background: #fb4343;
+  color: #fff;
+  font-style: normal;
+  display: inline-block;
+  height: 10px;
+  line-height: 10px;
+  font-size: 9px;
+  padding: 1px 2px;
+  margin-left: 3px;
+  vertical-align: top;
+  margin-top: 8px;
+}
+/*查看更多*/
+.search-more a{
+  display: block;
+  text-decoration: none;
+  color: #0058d2;
+  height: 44px;
+  line-height: 44px;
+  text-align: right;
+  margin-right: 10px;
+  border-top: 1px solid #EFEAEA;
+}
+
+/*百度推荐*/
+.news .news-content{
+  padding: 13px 12px 0 12px;
+}
+.news .news-content ul li{
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.news .news-content ul li a {
+  text-decoration: none;
+  display: block;
+  color: #262626;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+}
+.news .news-content ul li:first-child a{
+  display: flex;
+  height: 56px;
+}
+.news .news-content ul li:first-child a img {
+  width: 83px;
+  height: 50px;
+}
+.news .news-content ul li:first-child .news-desc{
+  flex: 1;
+  position: relative;
+  margin-left: 10px;
+}
+.news .news-content ul li:first-child .news-desc .time{
+  position: absolute;
+  top: 22px;
+  left: 0;
+  color: #999;
+  font-size: 12px;
+}
+
+/*新闻标题*/
+.news .news-content ul li a .news-title{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 85%;
+  display: inline-block;
+}
+/*新闻时间*/
+.news .news-content ul li a .time{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #999;
+  font-size: 12px;
+}
+
+/*管理我的卡片*/
+.admin h3{
+  padding: 0 8px;
+  line-height: 45px;
+  height: 45px;
+  color: #333;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+
+/*底部信息*/
+footer.bottom-info{
+  padding: 0 28px;
+  margin-bottom: 10px;
+}
+footer.bottom-info .tip-link a{
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+  height: 33px;
+  line-height: 33px;
+  color: #555;
+}
+footer.bottom-info .tip-link a.baidu-icon{
+  padding-left: 25px;
+  background: url(../img/mobile/w_icon2.png) no-repeat;
+  background-size: 15px 15px;
+  background-position: 5px 7px;
+}
+footer.bottom-info .tip-link i.hot{
+  color: #fff;
+  background: #ed5353;
+  font-style: normal;
+  font-size: 9px;
+  display: inline-block;
+  width: 21px;
+  height: 12px;
+  line-height: 12px;
+  margin-right: 5px;
+}
+
+footer.bottom-info .copy-right a{
+  padding-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+footer.bottom-info .copy-right a.user-edit {
+  color: #555;
+  height: 34px;
+  line-height: 34px;
+  font-size: 13px;
+}
+footer.bottom-info .copy-right a.user-edit i{
+  background: url(../img/mobile/edit.png) no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+}
+footer.bottom-info .copy-right a:nth-of-type(2),
+footer.bottom-info .copy-right a:nth-of-type(3){
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  padding-top: 6px;
+  color: #999;
+}
+footer.bottom-info .copy-right a.recorde-code i{
+  background: url(../img/mobile/guohui.png) no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin-right: 5px;
+}
